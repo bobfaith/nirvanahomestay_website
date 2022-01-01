@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&family=Tangerine:wght@400;700&display=swap');
+
+
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root{
+    --font-family: 'Roboto', sans-serif;
+    --font-family-2: 'Poppins', sans-serif;
+    --font-family-3: 'Tangerine', cursive;
+    --normal-font: 400;
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #fcfcfc;
+    --bg-color2: #e7e7ee;
+    --primary-color: #0f606b;
+    --secondary-color: #ff7235;
+    --primary-shadow: #8b8eaf;
+    --secondary-shadow: #d8ccc7; 
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+/* Variables End */
+
+
+/* ==========================================================================
+   CSS Reset
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--font-family);
+    
+}
+
+h2{
+    font-family: var(--font-family-2);
+    
+}
+
+.inclusion {
+    
+    background: url(bgbg.jpg);
+    background-size: 100%;
+}
+.wrapper {
+    max-width: 70.75rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.logo-img{
+    width: 200px;
+    height: 70px;
+    border-radius: 10%;
+    background-blend-mode: darken
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem 3.5rem;
+    /* background-color: var(--bg-color); */
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(150, 150, 150, 0.1);
+    font-family: var(--font-family-2);
+}
+
+nav .logo {
+    /* text-decoration: none;*/
+    cursor: pointer; 
+    
+}
+
+nav .nav-link {
+    color: var(--primary-color);
+    transition: var(--transition);
+    font-size: 1.3rem;
+    
+}
+
+nav .nav-link:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
+nav ul li {
+    font-weight: var(--normal-font);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/**************
+    Carousal Image 
+**************/
+.cimg {
+    height:40rem;
+}
+
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
+.about {
+    background-color: var(--bg-color);
+    padding: 1rem 7.5rem;
+    border-radius: 11px;
+}
+
+.about h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+}
+
+.about p {
+    line-height: var(--line-height);
+    padding: 0.1rem;
+}
+
+
+/* ==========================================================================
+   ROOM SECTION
+   ========================================================================== */
+
+.rooms {
+    background-color: var(--bg-color);
+    max-width: 70.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 10px;
+    border-radius: 11px;
+}
+
+.room-section {
+    display: flex;
+    gap: 1.9rem;
+   
+}
+.rooms-header {
+    margin-bottom: 1.2rem;
+}
+
+.rooms-wrapper img {
+    border-radius: 11px;
+}
+
+.icon {
+    width: 35.875rem;
+    height: 25.25rem;
+}
+
+.icon-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 10px;
+}
+
+.pic-details {
+    margin: auto;
+    text-align: left
+}
+
+
+/* ==========================================================================
+   GALLERY SECTION
+   ========================================================================== */
+
+.photos {
+    background-color: var(--bg-color);
+    padding: 32px 0;
+    margin-top: 2rem;
+    border-radius: 11px;
+}
+
+.photo-pic {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.photo-pic:hover {
+    transform: scale(1.6);
+    transition: 1.5s;
+    cursor: pointer;
+    
+}
+
+.photo-pic:hover .photo-container {
+    background: var(--bg-color2);
+}
+
+.photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;                                                                                   
+}
+
+.photos-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.photo-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+    /* overflow: hidden;  */
+}
+
+.photo-container p {
+    padding: 0.4rem;
+}
+
+.photos-title {
+    margin-bottom: var(--bottom-margin);
+}
+
+.photo-details {
+    margin-bottom: var(--bottom-margin);
+}
+
+.photo-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
+.contact {
+    margin-top: 2rem;
+    background-color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+}
+
+
+.contact-form-container {
+    display: flex;
+    gap: 6.9rem;
+    /* justify-content: space-around; */
+    align-items: center;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+    line-height: 2.7rem;
+    font-weight: var(--bold-font);
+    color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+
+.contact-form-container .input-field {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 1px outset var(--primary-color);
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+    padding: 0.5rem;
+    color: var(--primary-color);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+.submit-btn {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--bold-font);
+    transition: var(--transition);
+    /* transform: translateX(155px) */
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    color: #fcfcfc;
+}
+
+.address-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    max-width: 15.75rem;
+    color: var(--primary-color);
+}
+
+.address-details a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.socials {
+    display: flex;
+    gap: .2rem;
+    /* flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 40%;
+    padding-right: 4rem; */
+    
+}
+
+.socicon {
+    width: 2rem;
+    height: 2rem;
+    
+    
+}
+
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+
+footer {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(150, 150, 150, 0.1);
+    /* padding: 1.5rem 0rem; */
+    /* text-align: justify; */
+    /* padding: 2.5rem 0 0; */
+    /* height: 6rem; */
+}
+
+/* .address {
+    padding-top: 20px;
+} */
+
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.up-arrow {
+    width: 2.2rem;
+    height:2.2rem;
+}
+
+
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+@media screen and (max-width: 780px){
+    /* changes reflect on screen with a width of 720px and below */
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+    }
+
+    .hero {
+        margin-top: -4rem;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero img {
+        margin-top: 20px;
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+    
+
+    .about {
+        margin-top: 2rem;
+        padding: 1rem 5.5rem;
+    }
+
+    .about h2 {
+        text-align: center;
+    }
+
+    .about p {
+        text-align: left;
+    }
+
+    .icon {
+        width: 6.8rem;
+        height: 6.18rem;
+    }
+
+    .photos-container {
+        flex-direction: column;
+    }
+
+    .photo-container {
+        width: 24.875rem;
+    }
+
+    .contact-form-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 25.75rem;
+    }
+
+    .socials {
+        right: 2%;
+    }
+}
+
+@media  screen and (max-width: 480px){
+    .hero img {
+        height: 32.5rem;
+        width: 23rem;
+    }
+    
+
+    .photo-container {
+        width: 17.875;
+    }
+
+    .photo-details {
+        margin: 0 12px;
+        text-align:justify;
+    }
+
+    .contact-form-container {
+        max-width: 17.75rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* ==========================================================================
+   END OF THE FILE
+   ========================================================================== */
